@@ -12,10 +12,10 @@ final class Context
         $this->arraySortObject = $arraySortObject;
     }
 
-    public function sort(array $data, &$error = null)
+    public function sort(array $data, &$error)
     {
         try{
-            $result = $this->sort($data);
+            $result = $this->arraySortObject->sort($data);
         } catch (\RuntimeException $e){
             $result = $data;
             $error = $e->getMessage();

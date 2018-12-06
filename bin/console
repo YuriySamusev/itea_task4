@@ -3,4 +3,13 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use \App\ContextController as Test;
 
+
+$arr1 = ['first' => 'strawberry', 'second' => 'apple', 'last' => 'blackberry'];
+$arr2 = [22, [5,6,8,2], 55, 111, '2', [], [5, 'asd'], 1, 8];
+
+echo print_r(Test::sort($arr1, 'up'));
+echo print_r(Test::sort($arr2, 'down'));
+echo print_r(Test::sort($arr2, 'up'));
+echo print_r(Test::sort($arr1, 'left'));
